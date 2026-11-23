@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c1c">
+  <title>البرمجة · الوحدة 4</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <header class="top">
+    <div class="top-row">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">{ }</span>
+        <div>
+          <p class="brand-unit">البرمجة · الوحدة 4</p>
+          <p class="brand-ar" id="brandAr"></p>
+          <p class="brand-en" id="brandEn" lang="en" dir="ltr"></p>
+        </div>
+      </div>
+      <div class="track" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="التقدم في المسار">
+        <span id="progressBar"></span>
+      </div>
+    </div>
+    <nav class="rail" id="rail" aria-label="المحطات"></nav>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <div class="after">
+    <p class="tools" id="tools">
+      <span id="score"></span>
+      <button type="button" id="reset">ابدأ من جديد</button>
+    </p>
+    <footer dir="ltr">All rights reserved, Sana Al-Banna</footer>
+  </div>
+
+  <nav class="pager" aria-label="التنقل بين الشاشات">
+    <button type="button" class="pbtn prev" id="prev"><span aria-hidden="true">→</span> <span>السابق</span></button>
+    <div class="pmid">
+      <span class="count" id="count" dir="ltr"></span>
+      <div class="dots" id="dots"></div>
+    </div>
+    <button type="button" class="pbtn next" id="next">
+      <span class="ntext"><span class="nlabel">التالي</span><span class="nname" id="nextName"></span></span>
+      <span aria-hidden="true" class="narrow">←</span>
+    </button>
+  </nav>
+
+  <p id="voice" class="voice" role="status" hidden></p>
+  <div id="tip" class="tip" role="tooltip" hidden>
+    <p class="tip-en" id="tipEn" lang="en" dir="ltr"></p>
+    <p class="tip-ar" id="tipAr"></p>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/outline.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/stations/s0.js"></script>
+  <script src="js/stations/a1.js"></script>
+  <script src="js/stations/a2.js"></script>
+  <script src="js/stations/a3.js"></script>
+  <script src="js/stations/a4.js"></script>
+  <script src="js/stations/a5.js"></script>
+  <script src="js/stations/a6.js"></script>
+  <script src="js/stations/cases.js"></script>
+  <script src="js/stations/final.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
