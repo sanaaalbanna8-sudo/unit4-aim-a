@@ -12,8 +12,8 @@
 
   function mapArt(current) {
     const W = 560, H = 445;
-    const pos = [[470, 70], [280, 70], [90, 70], [90, 215], [280, 215], [470, 215], [470, 360], [280, 360]];
-    let s = '<path class="flowdash" d="M470 70 L90 70 C 20 70, 20 215, 90 215 L470 215 C 540 215, 540 360, 470 360 L280 360" fill="none" stroke="' + C.mute + '" stroke-opacity=".55" stroke-width="3"/>';
+    const pos = [[470, 58], [280, 58], [90, 58], [90, 198], [280, 198], [470, 198], [470, 338], [280, 338], [90, 338]];
+    let s = '<path class="flowdash" d="M470 58 L90 58 C 20 58, 20 198, 90 198 L470 198 C 540 198, 540 338, 470 338 L90 338" fill="none" stroke="' + C.mute + '" stroke-opacity=".55" stroke-width="3"/>';
     UI.stations.forEach(function (st, i) {
       const p = pos[i];
       if (!p) return;
@@ -26,12 +26,12 @@
         A.text(p[0], p[1] + 52, st.short || st.titleAr, { size: 14 }) +
         A.text(p[0], p[1] + 70, st.shortEn || "", { size: 11, en: true, color: C.mute, weight: 500 }) + "</g>";
     });
-    return A.svg(W, H, s, "خريطة المسار: ثماني محطات متتالية");
+    return A.svg(W, H, s, "خريطة المسار: تسع محطات متتالية");
   }
 
   UI.register({
     id: "s0",
-    badge: "0",
+    badge: "ب",
     tone: "coral",
     short: "البداية",
     shortEn: "Start",
@@ -67,7 +67,7 @@
         titleAr: "خريطة المسار",
         titleEn: "The path",
         render: function (api) {
-          api.p("هذا مسار واحد من ثماني محطات. كل محطة تبني على التي قبلها، وتنتهي بمحلل برنامج حقيقي.", "S0-MAP");
+          api.p("هذا مسار واحد من تسع محطات. بوابة الانطلاق تأتي قبل التفكير الحاسوبي، وكل محطة تبني على التي قبلها، وتنتهي بمحلل برنامج حقيقي.", "S0-MAP");
           api.points([
             "كل شاشة فيها فكرة واحدة، ومثال، ثم تجربة أو سؤال.",
             "اضغط «تحقق» لتعرف هل إجابتك صحيحة، ثم اكشف السبب إن أردت.",

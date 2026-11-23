@@ -99,10 +99,6 @@
     paintScore();
   }
 
-  function previewOn() {
-    return /(?:\?|&)preview(?:=|&|$)/.test(location.search);
-  }
-
   /* ---------- الصوت والتلميح ---------- */
 
   function showVoice(message) {
@@ -905,6 +901,16 @@
     const map = screen.map;
     const nav = el("nav", { class: "outline-track", "aria-label": "العناوين الرئيسة في هذه المحطة" });
     const row = el("ol", { class: "ot-branches" });
+    if (station.id === "a1") {
+      const gateBtn = el("button", { type: "button", class: "ot-b", title: "From an idea to smart applications" },
+        el("span", { class: "ot-n", dir: "ltr", text: "0" }),
+        el("span", { class: "ot-bn", text: "بوابة الانطلاق" }),
+        el("span", { class: "ot-bn-en", lang: "en", dir: "ltr", text: "Launch gate" }));
+      gateBtn.addEventListener("click", function () {
+        if (window.UI && UI.goTo) UI.goTo("gate", 1);
+      });
+      row.appendChild(el("li", null, gateBtn));
+    }
     o.branches.forEach(function (branch, b) {
       const on = map && map[0] === b;
       const btn = el("button", { type: "button", class: "ot-b" + (on ? " on" : ""), title: branch.en },
@@ -1007,9 +1013,6 @@
         state.screen = Math.min(saved.screen || 0, stations[found].screens.length - 1);
       }
       state.max = Math.max(found, maxFound, 0);
-      const tools = document.getElementById("tools");
-      tools.appendChild(el("a", { id: "previewLink", href: previewOn() ? location.pathname : location.pathname + "?preview", text: previewOn() ? "إغلاق وضع المعلمة" : "وضع المعلمة" }));
-      if (previewOn()) document.body.classList.add("preview");
       wire();
       if (window.speechSynthesis) {
         speechSynthesis.onvoiceschanged = function () { voiceReady = true; };

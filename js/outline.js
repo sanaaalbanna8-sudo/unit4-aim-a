@@ -4,6 +4,17 @@
   function it(en, ar, life) { return { en: en, ar: ar, life: life }; }
 
   window.OUTLINE = {
+    gate: {
+      lead: "From an idea to the applications people use",
+      leadAr: "استرجاع سريع: من الشخص الذي يكتب، إلى اللغة، إلى التطبيق الذي يُستخدم كل يوم.",
+      branches: [
+        { en: "The code journey", ar: "رحلة الكود", life: "وصفة الكنافة: شخص يكتب الخطوات، والخطوات هي البرنامج، واللغة هي طريقة الكتابة، والفرن ينفذ." },
+        { en: "Languages in daily use", ar: "لغات تُستخدم كل يوم", life: "تطبيق الدردشة، وموقع المدرسة، ولعبة، وجدول العلامات: لكل واحد لغة أقرب إليه." },
+        { en: "Warm-up check", ar: "استرجاع سريع", life: "قبل الامتحان القصير تراجع تعريفًا واحدًا ومثالًا واحدًا." }
+      ],
+      map: [[0], [1], [2]]
+    },
+
     a1: {
       lead: "Application of computational thinking skills to analyse problems and processes",
       leadAr: "تطبيق مهارات التفكير الحاسوبي لتحليل المسائل والعمليات والوصول إلى حلول تصبح تطبيقات.",

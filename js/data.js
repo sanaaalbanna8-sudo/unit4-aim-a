@@ -172,7 +172,14 @@
     "connective": T("Connective", "connective", "A connective joins propositions, such as AND, OR, and NOT.", "الرابط يصل القضايا، مثل و، أو، وليس."),
     "intersection": T("Intersection", "intersection", "The intersection of two sets holds only the objects that belong to both.", "التقاطع ما ينتمي إلى المجموعتين معًا."),
     "natural-language": T("Natural language", "natural language", "A natural language is a human language such as Arabic or English.", "اللغة الطبيعية لغة البشر، مثل العربية أو الإنجليزية."),
-    "prototype": T("Prototype", "prototype", "A prototype is an early version that shows the look and the flow before the full product.", "النموذج الأولي نسخة مبكرة تُظهر المظهر والتدفق قبل اكتمال المنتج.")
+    "prototype": T("Prototype", "prototype", "A prototype is an early version that shows the look and the flow before the full product.", "النموذج الأولي نسخة مبكرة تُظهر المظهر والتدفق قبل اكتمال المنتج."),
+    "programmer": T("Programmer", "programmer", "A programmer analyses a problem, designs a logical solution, and writes the instructions.", "المبرمج يحلل المشكلة، ويصمم حلًا منطقيًا، ويكتب التعليمات."),
+    "program": T("Program", "program", "A program is an ordered set of instructions a computer carries out.", "البرنامج مجموعة تعليمات مرتبة ينفذها الحاسوب."),
+    "programming-language": T("Programming language", "programming language", "A programming language is the set of rules used to write instructions a person can read.", "لغة البرمجة قواعد يُكتب بها الأمر ليقرأه الإنسان وتُترجم للحاسوب."),
+    "syntax": T("Syntax", "syntax", "Syntax is the set of writing rules a programming language requires.", "البناء قواعد الكتابة التي تشترطها لغة البرمجة."),
+    "interpreter": T("Interpreter", "interpreter", "An interpreter runs each instruction as it reads it, without waiting for the whole program.", "المفسر ينفذ كل تعليمة حين يقرأها، ولا ينتظر البرنامج كله."),
+    "dart": T("Dart", "Dart", "Dart is used with Flutter to build Android and iOS apps from one code base.", "Dart تُستخدم مع Flutter لبناء تطبيقات أندرويد وآي أو إس من كود واحد."),
+    "erlang": T("Erlang", "Erlang", "Erlang keeps many connections running at once and isolates a fault so the rest continues.", "Erlang تدير اتصالات كثيرة معًا، وتعزل الخطأ حتى يكمل الباقي.")
   };
 
   window.SHOTS = {

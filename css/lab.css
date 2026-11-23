@@ -248,6 +248,42 @@
 }
 .lab-line { margin: 0; color: var(--muted); font-size: 0.92rem; }
 .lab-body { display: grid; gap: 0.7rem; }
+
+.pipe, .lang-grid, .case-grid { display: grid; gap: 0.7rem; }
+.pipe-card, .lang-card, .case-card {
+  text-align: start; color: inherit; font: inherit;
+  border: 1px solid var(--line); border-radius: 18px;
+  background: rgba(238, 241, 255, 0.04); padding: 0.85rem 0.95rem;
+}
+.pipe-card, .lang-card, .case-head {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.25rem;
+  width: 100%; cursor: pointer;
+}
+.case-head { flex-direction: row; align-items: center; gap: 0.65rem; background: none; border: 0; color: inherit; font: inherit; padding: 0; }
+.pipe-n {
+  font-family: var(--en); font-weight: 700; color: var(--amber);
+  width: 1.6rem; height: 1.6rem; display: grid; place-items: center;
+  border-radius: 50%; border: 1px solid rgba(251, 191, 36, 0.45);
+}
+.pipe-en, .lang-card .en { font-family: var(--en); font-size: 0.82rem; color: var(--muted); }
+.pipe-more, .lang-use, .case-body { display: none; }
+.pipe-card:hover .pipe-more, .pipe-card:focus-visible .pipe-more, .pipe-card.open .pipe-more,
+.lang-card:hover .lang-use, .lang-card:focus-visible .lang-use, .lang-card.open .lang-use,
+.case-card.open .case-body { display: grid; gap: 0.35rem; margin-top: 0.35rem; }
+.pipe-card.open, .lang-card.open, .case-card.open { border-color: var(--tone, var(--teal)); background: rgba(45, 212, 191, 0.08); }
+.pipe-ex { color: var(--muted); }
+.lang-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.case-body p { margin: 0; }
+.case-body b { color: var(--amber); }
+.case-titles { display: flex; flex-direction: column; }
+@media (min-width: 900px) {
+  .pipe { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lang-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .case-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+}
+@media (max-width: 899px) {
+  .lang-grid, .case-grid { grid-template-columns: 1fr; }
+}
 .readout {
   margin: 0;
   padding: 0.55rem 0.85rem;
